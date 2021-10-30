@@ -1,0 +1,143 @@
+body {
+  font-family: "Inter", sans-serif;
+  color: #315b96;
+}
+
+.temperature,
+.tempUnits,
+.temp-description,
+.actual-city {
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  margin: 10px;
+  max-width: 760px;
+  background-color: #ffdfdf;
+  border-radius: 10px;
+}
+
+.container-top,
+.container-bottom {
+  padding-top: 20px;
+}
+
+.search-icon {
+  color: #fbc1bc;
+}
+
+#search-city {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #315b96;
+  border: none;
+  border-radius: 30px;
+  color: #fbc1be;
+  font-size: 14px;
+  padding: 10px;
+  margin-bottom: 25px;
+  margin-top: 0px;
+  box-shadow: 6px 12px 14px 0px rgba(20, 45, 76, 0.7);
+  transition: all 200ms ease-in-out;
+}
+button:hover {
+  background-color: #fbc1be;
+  border: none;
+  color: #315b96;
+  cursor: pointer;
+}
+
+input {
+  border: 2px solid #fbc1bc;
+  background-color: none;
+  opacity: 0.5;
+  transition: 0.4s ease-in-out;
+}
+
+input:focus {
+  width: 80%;
+}
+
+.actual-city {
+  font-weight: bold;
+}
+
+.col-right {
+  text-align: right;
+  margin-bottom: 25px;
+}
+
+.weather-data {
+  min-height: 230px;
+  padding-top: 9rem;
+}
+
+.temperature {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.tempUnits a,
+.tempUnits {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #315b96;
+}
+
+.tempUnits a:hover {
+  opacity: 0.6;
+}
+
+.temp-description {
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+
+.weather-img {
+  vertical-align: middle;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.bottom-data {
+  padding-bottom: 10px;
+}
+
+.card-group {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.card-header,
+.card-footer,
+.card-body {
+  text-align: center;
+  border: 1px solid #ffdfdf;
+  background-color: #ffdfdf;
+  opacity: 0.6;
+}
+
+.card-header {
+  border-bottom: none;
+}
+
+.card-body {
+  padding: 0rem 1rem;
+}
+
+.card-footer {
+  border-top: none;
+}
+
+.weather-icon {
+  color: #315b96;
+  font-size: 30px;
+}
+.weekday,
+.day-temp {
+  color: #315b96;
+}

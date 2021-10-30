@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PlusWeek5</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/0ff67ab84d.js" crossorigin="anonymous"></script>
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+  <body>
+    <div class="container">
+      <div class="container-top">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-left">                
+                    <form id="search-city">
+                            <div class="input-group mb-5">                                    
+                                    <span class="input-group-text">
+                                        <i class="fas fa-search search-icon"></i>
+                                    </span>
+                                    <input id="search-city-input"  class="form-control" type="text" placeholder="Search a city here" autofocus="on"/>  
+                                                                                              
+                            </div>                            
+                    </form>
+                    <button class="currentLocation">Clic for local temperature</button>                    
+                <h3 class="actual-city">City</h3>
+                     <form id="day-data">
+                <div class="day-data col">
+                    <div class="row pb-md-5">
+                    
+                        
+                        <div class="col-7 top-data">
+                            <h6 id="actual-day">September 17,Friday</h6>
+                        </div>
+              
+                          <div class="col-3 top-data text-end">                            
+                              <h6 id="actual-hour">20:00 hr</h6>                                
+                          </div>
+                      </div>    
+                      <div class="row mt-md-5">
+                          <div class="col-7 bottom-data">
+                              <h6 class="humidity">Humidity: <span class="humidity-porcentage">80%</span></h6>
+                              <h6 class="wind">Wind: <span class="wind-speed">6km/hr</span></h6>
+                          </div>
+                          <div class="col-3 bottom-data text-end">
+                              <h6 class="high-temp">24°C</h6>
+                              <h6 class="low-temp">18°C</h6>
+                          </div>
+                      </div>              
+
+                  </div>
+              </div>
+            </form>
+              <div class="col-12 col-sm-6 col-right"> 
+                  <h1 class="temperature"> 
+                      <span id="temperature">
+                          20
+                      </span>
+                      
+                    <span class="tempUnits">
+                          <a href="#" id="celsius-link">°C</a> |
+                          <a href="#" id="fahrenheit-link">°F</a>
+                      </span>                      
+                  </h1>
+                  <h6 class="temp-description">Partly cloudy</h6>
+                  <img class="weather-img" src="images\undraw_clouds.svg" width="90%" />
+              </div>
+                  
+          </div>              
+      </div>
+
+
+      <div class="card-group">
+          <div class="card">  
+              <div class="card-header">
+                  <h6 class="weekday">Sat</h6>
+              </div>              
+              <div class="card-body">                    
+                  <i class="fas fa-sun weather-icon"></i>                                        
+              </div>
+              <div class="card-footer">
+                  <h6 class="day-temp">26° / 15°</h6>                    
+              </div>
+          </div>
+
+          <div class="card">  
+              <div class="card-header">
+                  <h6 class="weekday">Sun</h6>
+              </div>              
+              <div class="card-body">                    
+                  <i class="fas fa-cloud-showers-heavy weather-icon"></i>                                        
+              </div>
+              <div class="card-footer">
+                  <h6 class="day-temp">25° / 15°</h6>                    
+              </div>
+          </div>
+
+          <div class="card">  
+              <div class="card-header">
+                  <h6 class="weekday">Mon</h6>
+              </div>              
+              <div class="card-body">                    
+                  <i class="fas fa-cloud-sun weather-icon"></i>                                        
+              </div>
+              <div class="card-footer">
+                  <h6 class="day-temp">24° / 15°</h6>                    
+              </div>
+          </div>
+
+          <div class="card">  
+              <div class="card-header">
+                  <h6 class="weekday">Tue</h6>
+              </div>              
+              <div class="card-body">                    
+                  <i class="fas fa-cloud-showers-heavy weather-icon"></i>                                        
+              </div>
+              <div class="card-footer">
+                  <h6 class="day-temp">26° / 15°</h6>                    
+              </div>
+          </div>
+
+          <div class="card">  
+              <div class="card-header">
+                  <h6 class="weekday">Wed</h6>
+              </div>              
+              <div class="card-body">                    
+                  <i class="fas fa-cloud-sun weather-icon"></i>                                        
+              </div>
+              <div class="card-footer">
+                  <h6 class="day-temp">27° / 14°</h6>                    
+              </div>
+          </div>
+
+          <div class="card">  
+              <div class="card-header">
+                  <h6 class="weekday">Thu</h6>
+              </div>              
+              <div class="card-body">                    
+                  <i class="fas fa-sun weather-icon"></i>                                        
+              </div>
+              <div class="card-footer">
+                  <h6 class="day-temp">26° / 15°</h6>                    
+              </div>
+          </div>
+
+          <div class="card">  
+              <div class="card-header">
+                  <h6 class="weekday">Fri</h6>
+              </div>              
+              <div class="card-body">                    
+                  <i class="fas fa-sun weather-icon"></i>                                        
+              </div>
+              <div class="card-footer">
+                  <h6 class="day-temp">27° / 14°</h6>                    
+              </div>
+          </div>
+              
+
+
+      </div>
+      <a href="https://github.com/VirginiaRool/weather-app" id="source-link">Open-source code</a> <span id="coder-name">by Virginia Romero</span>  
+           
+  </div>     
+
+  </div>
+    <script src="src/script.js"></script> 
+  </body>
+</html>
