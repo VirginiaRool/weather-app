@@ -141,3 +141,7 @@ input:focus {
 .day-temp {
   color: #315b96;
 }
+
+.repo {
+  text-align: right;
+}
